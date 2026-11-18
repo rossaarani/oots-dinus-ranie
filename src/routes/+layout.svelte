@@ -8,7 +8,11 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>Portofolio — OOTS 2026</title>
+	<title>Maharani Rosyadah — Portofolio Siswa 2026</title>
+	<meta
+		name="description"
+		content="Portofolio Maharani Rosyadah, Siswi SMK PPLG. Membangun antarmuka web rapi, cepat, dan sistem informasi sekolah yang fungsional."
+	/>
 </svelte:head>
 
 {@render children()}
