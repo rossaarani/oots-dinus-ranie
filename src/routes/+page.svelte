@@ -225,7 +225,12 @@
 					{#each services as svc}
 						<div class="row rev group">
 							<span class="idx">{svc.code}</span>
-							<h3 class="text-ink">{svc.title}</h3>
+							<!-- Mengubah h3 agar tidak uppercase dan diberi efek gradasi warna oranye -->
+							<h3 class="text-ink normal-case">
+								<span style="background: linear-gradient(135deg, #c85a32 0%, #e07a5f 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+									{svc.title}
+								</span>
+							</h3>
 							<p class="m text-muted">{svc.method}</p>
 						</div>
 					{/each}
@@ -234,13 +239,13 @@
 		</section>
 
 		<!-- 03 STUDIO / TENTANG SAYA -->
-		<section id="tentang" class="border-t border-line">
+		<section id="tentang" class="border-t border-line py-16">
 			<span class="folio">03</span>
 			<div class="wrap">
-				<div class="kicker rev text-muted">Tentang Saya</div>
+				<div class="kicker rev text-muted mb-8">Tentang Saya</div>
 
-				<div class="about-grid-2col grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
-					<!-- Kolom kiri: Foto Rani rasio 4:5 -->
+				<div class="about-grid-2col grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-start lg:gap-12">
+					<!-- Kolom kiri: Foto Rani -->
 					<div class="lg:col-span-5">
 						<figure class="rev about-portrait max-w-[340px] sm:max-w-[380px]">
 							<div class="pf bg-surface aspect-[4/5] overflow-hidden rounded border border-line">
@@ -257,8 +262,8 @@
 						</figure>
 					</div>
 
-					<!-- Kolom kanan: Manifesto text -->
-					<div class="manifesto-2col rev flex flex-col gap-4 lg:col-span-7">
+					<!-- Kolom kanan: Teks Manifesto (Sejajar di atas dengan foto) -->
+					<div class="manifesto-2col rev flex flex-col gap-4 lg:col-span-7 lg:pt-0">
 						<p class="lead text-ink text-xl font-serif">
 							"Membangun hal yang berguna, fungsional, dan terlihat rapi dari baris kode hingga
 							antarmuka pengguna."
@@ -267,7 +272,7 @@
 							{profile.fullBio}
 						</p>
 
-						<div class="mt-6 flex flex-col divide-y divide-line border-t border-b border-line">
+						<div class="mt-4 flex flex-col divide-y divide-line border-t border-b border-line">
 							{#each profile.facts as fact}
 								<div class="flex items-center justify-between gap-4 py-3 text-sm">
 									<span class="font-mono text-[10.5px] tracking-[0.14em] text-muted uppercase">
@@ -278,7 +283,7 @@
 							{/each}
 						</div>
 
-						<div class="mt-5 flex flex-col gap-2.5">
+						<div class="mt-4 flex flex-col gap-2.5">
 							<span class="font-mono text-[10.5px] tracking-[0.16em] text-muted uppercase">
 								Keahlian & Perkakas
 							</span>
@@ -436,6 +441,7 @@
 			</div>
 		</section>
 
+	</main>
 	
 	<!-- Footer -->
 	<footer class="border-t border-line py-8">
